@@ -16,10 +16,10 @@
     function CustomHtml(options) {
         this.button = document.createElement('button');
         this.button.className = 'medium-editor-action';
-        if (this.button.innerText) {
-            this.button.innerText = options.buttonText || "</>";
+        if (options.buttonText) {
+            this.button.innerHTML = options.buttonText
         } else {
-            this.button.textContent = options.buttonText || "</>";
+            this.button.innerText = "</>";
         }
         this.button.onclick = this.onClick.bind(this);
         this.options = options;
